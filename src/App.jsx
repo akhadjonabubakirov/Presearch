@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect } from "react";
 import {
   HashRouter,
@@ -92,6 +93,27 @@ a { color: inherit; text-decoration: none; }
 }
 .textarea { min-height: 260px; resize: vertical; line-height: 1.6; }
 .meta { font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+@media (max-width: 720px) {
+  .tj { font-size: 16px; line-height: 1.65; }
+  .container { padding: 0 16px; }
+  .tj h1 { font-size: 30px !important; }
+  .tj h2 { font-size: 22px !important; }
+  .tj h3 { font-size: 18px !important; }
+  header .container > div { flex-wrap: wrap; row-gap: 10px; }
+  header nav { flex-wrap: wrap; gap: 12px !important; }
+  .navlink { font-size: 13px; }
+  header nav .navlink, header > .container > div > nav > a { padding-bottom: 2px; }
+  .btn { padding: 9px 16px; font-size: 13px; }
+  .input, .select, .textarea { max-width: 100% !important; font-size: 16px; }
+  .article-body { font-size: 17px !important; }
+  .eq { font-size: 17px !important; }
+  .tj table { font-size: 14px; }
+  .pill { font-size: 10px; }
+  .measure, .measure * { max-width: 100%; box-sizing: border-box; }
+  .hero { padding: 56px 0 40px !important; }
+  .hero h1 { font-size: 26px !important; }
+  header > .container { padding: 12px 16px !important; }
+}
 `;
 
 /* ------------------------------------------------------------------ */
@@ -580,7 +602,7 @@ function Home() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ padding: "90px 0 60px", textAlign: "center" }}>
+      <section className="hero" style={{ padding: "90px 0 60px", textAlign: "center" }}>
         <div className="container measure" style={{ textAlign: "center" }}>
           <div className="kicker" style={{ marginBottom: 18 }}>
             Ideas worth thinking about
